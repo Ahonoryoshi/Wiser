@@ -9,8 +9,31 @@
         </div>
         <div class="col-md-6">
             <h2>My Quotes</h2>
-                <div *ngFor='let quote of quotes;let i = index'>
-                    <h6>{{quote.statement}}</h6>
+            
+                <div class="container" *ngFor='let quote of quotes;let i = index'>
+                    <style>
+                        .yes{
+                            background-color: aliceblue;
+                        }
+                    </style>
+                    <h6><style>
+                        h6{
+                            font-size: x-large;
+                        }
+                    </style> {{quote.statement}}</h6>
+                    <div class="row"><p>2 minutes ago</p></div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button>Upvote</button>
+                        </div>
+                        <div class="col-md-3"><button>Downvote</button></div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"> 0 upvotes</div>
+                        <div class="col-md-3"> 0 downvotes</div>
+                    </div>
+                    <br><br>
                     <br>
                 </div>
 

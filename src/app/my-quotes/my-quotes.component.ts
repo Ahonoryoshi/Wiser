@@ -15,7 +15,6 @@ export class MyQuotesComponent implements OnInit {
 
   addNewQuote(quote:Quote){
     this.quotes.push(quote)
-    
   }
 
   constructor() { }

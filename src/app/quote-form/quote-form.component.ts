@@ -1,4 +1,5 @@
 import { Statement } from '@angular/compiler';
+import { NgForm } from '@angular/forms';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Quote } from '../quote';
 

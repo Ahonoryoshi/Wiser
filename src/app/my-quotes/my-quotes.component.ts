@@ -9,11 +9,13 @@ import { Quote } from '../quote';
 export class MyQuotesComponent implements OnInit {
 
   quotes: Quote[] =[
-    new Quote("hello","hi","hey")
+    new Quote("Manners Maketh Man","The king's Man","Ahona John"),
+    new Quote("I am just a Mathemtician", "Alan Turing", "Ahona Yoshi")
   ]
 
   addNewQuote(quote:Quote){
     this.quotes.push(quote)
+    
   }
 
   constructor() { }

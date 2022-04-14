@@ -1,1 +1,6 @@
-<p>quote-details works!</p>
+<div class="container">
+    <p>AUTHOR: {{quote.author}}</p>
+    <div class="row"><p>{{quote.dob|timepass}}</p></div>
+    <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
+
+</div>

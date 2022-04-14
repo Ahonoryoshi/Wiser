@@ -21,7 +21,6 @@
                             font-size: x-large;
                         }
                     </style> {{quote.statement}}</h6>
-                    <div class="row"><p>2 minutes ago</p></div>
                     <div class="row">
                         <div class="col-md-3">
                             <button (click)='up(i)'>Upvote</button>
@@ -33,6 +32,8 @@
                         <div class="col-md-3"  >{{quote.upvotes}} upvotes</div>
                         <div class="col-md-3" >{{quote.downvotes}} downvotes</div>
                     </div>
+                    <button (click)='toggleDetails(i)'>show details</button>
+                    <app-quote-details *ngIf="quote.showDetails" [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
                     <br><br>
                     <br>
                 </div>

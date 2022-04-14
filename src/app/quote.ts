@@ -1,6 +1,8 @@
 export class Quote {
 
+
     showDetails: boolean;
+    dob:Date;
     upvote:boolean;
     downvote:boolean;
     upvotes: number;
@@ -11,5 +13,7 @@ export class Quote {
       this.downvotes=0;
       this.upvote = false;
       this.downvote=false;
+      let today = new Date()
+      this.dob = new Date();
     }
 }

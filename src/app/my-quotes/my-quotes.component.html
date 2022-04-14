@@ -24,14 +24,14 @@
                     <div class="row"><p>2 minutes ago</p></div>
                     <div class="row">
                         <div class="col-md-3">
-                            <button>Upvote</button>
+                            <button (click)='up(i)'>Upvote</button>
                         </div>
-                        <div class="col-md-3"><button>Downvote</button></div>
+                        <div class="col-md-3" (click)='down(i)'><button>Downvote</button></div>
 
                     </div>
                     <div class="row">
-                        <div class="col-md-3"> 0 upvotes</div>
-                        <div class="col-md-3"> 0 downvotes</div>
+                        <div class="col-md-3"  >{{quote.upvotes}} upvotes</div>
+                        <div class="col-md-3" >{{quote.downvotes}} downvotes</div>
                     </div>
                     <br><br>
                     <br>

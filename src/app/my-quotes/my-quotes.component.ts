@@ -8,6 +8,7 @@ import { Quote } from '../quote';
 })
 export class MyQuotesComponent implements OnInit {
 
+
   quotes: Quote[] =[
     new Quote("Manners Maketh Man","The king's Man","Ahona John"),
     new Quote("I am just a Mathemtician", "Alan Turing", "Ahona Yoshi")
@@ -15,6 +16,14 @@ export class MyQuotesComponent implements OnInit {
 
   addNewQuote(quote:Quote){
     this.quotes.push(quote)
+  }
+  up(index:number){
+    this.quotes[index].upvotes +=1
+    
+  }
+  down(index:number){
+    this.quotes[index].downvotes +=1
+    
   }
 
   constructor() { }

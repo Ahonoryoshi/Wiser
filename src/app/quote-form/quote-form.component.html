@@ -4,29 +4,29 @@
     <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
         <div class="form-group">
   
-            <label for="name">Quote</label>
-            <textarea type="text" class="form-control" id="name" [(ngModel)]="newQuote.statement" name="name" #name='ngModel' required></textarea>
-            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            <label for="statement">Quote</label>
+            <textarea type="text" class="form-control" id="statement" [(ngModel)]="newQuote.statement" name="statement" #name='ngModel' required></textarea>
+            <div>
               <p>Quote is required</p>
             </div>
         </div>
         <div class="form-group">
   
-            <label for="description">Author</label>
+            <label for="author">Author</label>
             <input class="form-control" id="author" rows="4" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
-            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
-              <p>Description is required</p>
+            <div>
+              <p>Author name is required</p>
             </div>
         </div>
         <div class="form-group">
   
             <label for="complete">Submitted By</label>
-            <input type='date' id="submitter" [(ngModel)]="newGoal.submitter" name="submitter" #submitter="ngModel" required>
-            <div [hidden]="submitter.valid || submitter.pristine" class="alert alert-danger">
+            <input type='text' id="submitter" [(ngModel)]="newQuote.submitter" name="submitter" #submitter="ngModel" required>
+            <div>
               <p>Your name is required</p>
             </div>
         </div>
         <button type="submit" class="btn btn-success">Add Quote</button>
-    </form>s
+    </form>
 </div>
 

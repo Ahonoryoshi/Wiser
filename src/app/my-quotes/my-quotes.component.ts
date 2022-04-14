@@ -8,6 +8,14 @@ import { Quote } from '../quote';
 })
 export class MyQuotesComponent implements OnInit {
 
+  quotes: Quote[] =[
+    new Quote("hello","hi","hey")
+  ]
+
+  addNewQuote(quote:Quote){
+    this.quotes.push(quote)
+  }
+
   constructor() { }
 
   ngOnInit(): void {

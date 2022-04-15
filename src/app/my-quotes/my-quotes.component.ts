@@ -14,8 +14,26 @@ export class MyQuotesComponent implements OnInit {
     new Quote("Manners Maketh Man","The king's Man","Ahona John"),
     new Quote("I am just a Mathemtician", "Alan Turing", "Ahona Yoshi")
   ]
-  setAlert(index:number) {
-    alert("5 seconds ago");
+  quotevotes:number[] = [
+
+  ]
+
+  for ( quote:Quote, quotes:Quote[]){
+    this.quotevotes.push(quote.upvotes)
+  }
+  maxIndex:number = this.quotevotes.indexOf(Math.max.apply(this.quotevotes));
+
+  
+
+
+
+
+
+  
+  setAlert() {
+    let bestQuote:Quote = this.quotes[this.maxIndex]
+    let bestState:string = bestQuote.statement
+    bestState.toUpperCase()
   }
 
   addNewQuote(quote:Quote){
@@ -33,6 +51,7 @@ export class MyQuotesComponent implements OnInit {
   }
   toggleDetails(index:number){
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
+    this.setAlert()
   }
 
 

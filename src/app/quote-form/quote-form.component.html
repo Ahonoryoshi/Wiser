@@ -1,7 +1,16 @@
-<div class="container">
+
+<div class="container t">
+    <style>
+        .t{
+            background-color: olivedrab;
+            color: white;
+            font-size: x-small;
+        }
+    </style>
     <h4>ADD A QUOTE</h4>
 
-    <form (ngSubmit)='submitQuote()' name="quoteForm" #quoteForm='ngForm'>
+    <form id="myForm" (ngSubmit)='submitQuote(quoteForm)' name="quoteForm" #quoteForm='ngForm' >
+            
         <div class="form-group">
   
             <label for="statement">Quote</label>
@@ -32,7 +41,9 @@
         </div>
         <br>
         <br>
-        <button type="submit" class="btn btn-success">Add Quote</button>
+        <button onclick="myFunction" type="submit" class="btn btn-success">Add Quote</button>
+        
     </form>
 </div>
+
 

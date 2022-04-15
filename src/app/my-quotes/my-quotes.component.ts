@@ -12,7 +12,7 @@ export class MyQuotesComponent implements OnInit {
   quotes: Quote[] =[
     new Quote("Sometimes, it is the people who no one imagines anything of...who do the things that no one can imagine.", "The Imitation Game", " John Ahona "),
     new Quote("Manners Maketh Man","The king's Man","Ahona John"),
-    new Quote("I am just a Mathemtician", "Alan Turing", "Ahona Yoshi")
+    new Quote("I am not just a mathmatician, I am the MatheMagician", "Alan Turing", "Ahona Yoshi")
   ]
   quotevotes:number[] = [
 

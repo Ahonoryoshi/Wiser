@@ -1,6 +1,18 @@
 <div class="container">
-    <p>AUTHOR: {{quote.author}}</p>
     <div class="row"><p>{{quote.dob|timepass}}</p></div>
+    <p class="author">AUTHOR: {{quote.author}}</p>
+    <p class="submitter">SUBMITTED BY: {{quote.submitter}}</p>
+    
     <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
+    <style>
+        .author{
+            color: blueviolet;
+            font-style: italic;
+        }
+        .submitter{
+            color: orangered;
+            font-style: italic;
+        }
+    </style>
 
 </div>

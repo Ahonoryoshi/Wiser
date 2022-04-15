@@ -3,18 +3,21 @@
 
     
     <div class="row">
-        <div class="col-md-6">
-            <app-quote-form  (addQuote)="addNewQuote($event)" ></app-quote-form>
-            
-        </div>
-        <div class="col-md-6">
+        <div class="col-md-9">
             <h2>My Quotes</h2>
             
                 <div  class="container yes" *ngFor='let quote of quotes;let i = index'>
+                    
                     <style>
+                        button{
+                            background-color: greenyellow;
+                        }
                         .yes{
                             background-color: aliceblue;
                             border: salmon;
+                            border-style: solid;
+                            border-color: red;
+                            
                         }
                         h6{
                             color: brown;
@@ -22,9 +25,6 @@
 
                     </style>
                     <h6><style>
-                        h6{
-                            font-size: x-large;
-                        }
                     </style> {{quote.statement}}</h6>
                     <div class="row">
                         <div class="col-md-3">
@@ -38,11 +38,19 @@
                         <div class="col-md-3" >{{quote.downvotes}} downvotes</div>
                     </div>
                     <button (click)='toggleDetails(i)'>show details</button>
+                    <br><br><br>
                     <app-quote-details *ngIf="quote.showDetails" [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
                     <br><br>
                     <br>
                 </div>
+                <br>
+                <br><br><br><br>
 
+            
+        </div>
+
+        <div class="col-md-3">
+            <app-quote-form  (addQuote)="addNewQuote($event)" ></app-quote-form>
             
         </div>
     </div>
